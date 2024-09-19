@@ -1,6 +1,6 @@
 <style>
   body {
-    background-color: #bfbbb8;
+    background-color: #1e323e;
   }
 
   #pacman {
@@ -220,7 +220,7 @@
       ctx.fill();
 
       ctx.beginPath();
-      ctx.fillStyle = "#FFF";
+      ctx.fillStyle = "#dfe8ec";
       ctx.arc(left + 6, top + 6, s / 6, 0, 300, false);
       ctx.arc(left + s - 6, top + 6, s / 6, 0, 300, false);
       ctx.closePath();
@@ -234,7 +234,7 @@
       off[DOWN] = [0, f];
 
       ctx.beginPath();
-      ctx.fillStyle = "#bfbbb8";
+      ctx.fillStyle = "#1e323e";
       ctx.arc(
         left + 6 + off[direction][0],
         top + 6 + off[direction][1],
@@ -532,7 +532,7 @@
         return;
       }
 
-      ctx.fillStyle = "#212323";
+      ctx.fillStyle = "#dfe8ec";
       ctx.beginPath();
       ctx.moveTo(
         (position.x / 10) * size + half,
@@ -555,7 +555,7 @@
       var s = map.blockSize,
         angle = calcAngle(direction, position);
 
-      ctx.fillStyle = "#212323";
+      ctx.fillStyle = "#dfe8ec";
 
       ctx.beginPath();
 
@@ -621,7 +621,7 @@
     function drawWall(ctx) {
       var i, j, p, line;
 
-      ctx.strokeStyle = "#212323";
+      ctx.strokeStyle = "#dfe8ec";
       ctx.lineWidth = 5;
       ctx.lineCap = "round";
 
@@ -673,10 +673,10 @@
           if (map[i][j] === Pacman.PILL) {
             ctx.beginPath();
 
-            ctx.fillStyle = "#bfbbb8";
+            ctx.fillStyle = "#1e323e";
             ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
 
-            ctx.fillStyle = "#FFF";
+            ctx.fillStyle = "#dfe8ec";
             ctx.arc(
               j * blockSize + blockSize / 2,
               i * blockSize + blockSize / 2,
@@ -697,7 +697,7 @@
         j,
         size = blockSize;
 
-      ctx.fillStyle = "#bfbbb8";
+      ctx.fillStyle = "#1e323e";
       ctx.fillRect(0, 0, width * size, height * size);
 
       drawWall(ctx);
@@ -723,11 +723,11 @@
         layout === Pacman.BLOCK ||
         layout === Pacman.BISCUIT
       ) {
-        ctx.fillStyle = "#bfbbb8";
+        ctx.fillStyle = "#1e323e";
         ctx.fillRect(x * blockSize, y * blockSize, blockSize, blockSize);
 
         if (layout === Pacman.BISCUIT) {
-          ctx.fillStyle = "#FFF";
+          ctx.fillStyle = "#dfe8ec";
           ctx.fillRect(
             x * blockSize + blockSize / 2.5,
             y * blockSize + blockSize / 2.5,
@@ -878,7 +878,7 @@
     }
 
     function dialog(text) {
-      ctx.fillStyle = "#da617b";
+      ctx.fillStyle = "#f2fbff";
       ctx.font = "18px The Great Escape";
       var width = ctx.measureText(text).width,
         x = (map.width * map.blockSize - width) / 2;
@@ -955,13 +955,13 @@
       var topLeft = map.height * map.blockSize,
         textBase = topLeft + 17;
 
-      ctx.fillStyle = "#bfbbb8";
+      ctx.fillStyle = "#1e323e";
       ctx.fillRect(0, topLeft, map.width * map.blockSize, 30);
 
-      ctx.fillStyle = "#da617b";
+      ctx.fillStyle = "#f2fbff";
 
       for (var i = 0, len = user.getLives(); i < len; i++) {
-        ctx.fillStyle = "#da617b";
+        ctx.fillStyle = "#f2fbff";
         ctx.beginPath();
         ctx.moveTo(
           150 + 25 * i + map.blockSize / 2,
@@ -984,7 +984,7 @@
       //ctx.fillText("♪", 10, textBase);
       ctx.fillText("s", 10, textBase);
 
-      ctx.fillStyle = "#212323";
+      ctx.fillStyle = "#dfe8ec";
       ctx.font = "14px The Great Escape";
       ctx.fillText("Score: " + user.theScore(), 30, textBase);
       ctx.fillText("Level: " + level, 260, textBase);
