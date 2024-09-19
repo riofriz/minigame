@@ -1,0 +1,161 @@
+<style>
+  body {
+    background: #101010;
+    overflow: hidden;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  button {
+    border: 1px solid white;
+    padding: 1em;
+    background: transparent;
+    color: white;
+    width: 100%;
+    margin: 1.5em 0;
+    cursor: pointer;
+    width: 50%;
+
+    &.goodbye {
+      width: 100%;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    button {
+      margin-right: 10px;
+    }
+  }
+
+  .delay {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .delay.active {
+    opacity: 1;
+  }
+
+  p {
+    color: white;
+  }
+
+  .content {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section {
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .section.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .section#one {
+    text-align: center;
+    input {
+      background: #f8f8f8;
+      border: 0;
+      padding: 1.4em;
+      width: 70%;
+    }
+  }
+</style>
+
+<div class="content">
+  <div data-section="1" class="section active" id="one">
+    <div class="section-content">
+      <input type="text" id="collector" placeholder="Enter your name" />
+      <button class="go">GO</button>
+    </div>
+  </div>
+
+  <div data-section="2" class="section" id="two">
+    <div class="section-content hello">
+      <p class="delay" delay="500">HELLO <span class="name"></span></p>
+      <p class="delay" delay="800">Welcome to your interactive adventure</p>
+
+      <button>Next</button>
+    </div>
+  </div>
+
+  <div data-section="3" class="section" id="three">
+    <div class="section-content hello">
+      <p class="delay" delay="500">
+        <span class="name"></span>, choose one of the following options
+      </p>
+
+      <div class="delay buttons" delay="800">
+        <button>Health</button>
+        <button>Wealth</button>
+        <button>Happyness</button>
+      </div>
+    </div>
+  </div>
+
+  <div data-section="4" class="section" id="four">
+    <div class="section-content hello">
+      <p class="delay" delay="1100">You died.</p>
+      <button class="delay goodbye" delay="600">
+        Good bye <span class="name"></span>
+      </button>
+    </div>
+  </div>
+
+  <div data-section="5" class="section end" id="five">
+    <p class="delay" delay="500">
+      <button class="goodbye">Try again.</button>
+    </p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(".section button").on("click", function () {
+    if (!$(this).parents(".section").hasClass("end")) {
+      var name = $("#collector").val();
+      $(this).parents(".section").removeClass("active");
+      var next = parseInt($(this).parents(".section").attr("data-section")) + 1;
+      $('.section[data-section="' + next + '"]').addClass("active");
+      $(".name").html(name);
+
+      $('.section[data-section="' + next + '"]')
+        .find(".delay")
+        .each(function () {
+          var timeout = parseInt($(this).attr("delay"));
+          var self = $(this);
+          setTimeout(function () {
+            self.css("opacity", "1");
+          }, timeout);
+        });
+    } else {
+      $(".section").removeClass("active");
+      $("#one").addClass("active");
+    }
+  });
+</script>
