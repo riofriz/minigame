@@ -380,6 +380,13 @@ footer {
 	height: 206px
 }
 
+.page-fccview span[data-name="info"] > div > ul:before {
+    content: "Fernando, 32yo, madman.\A\AYes, some things on this profile should not be possible (like having text here for example). Yes, I did them anyway. \A\AI suck at introductions! you can ask me anything you like in the comment section and I'll reply as honestly as I can.\A\A";
+    padding: 1em;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
 @media (max-width:992px) {
 	.page-fccview:before {
 		height: 100px;
@@ -461,5 +468,31 @@ footer {
 	.page-fccview section header main>div.hidden>a:hover:after,
 	.page-fccview section header main>div.hidden>a:hover:before {
 		background: #102635
+	}
+
+	.page-fccview:before {
+		-webkit-animation: 5s linear infinite walk
+	}
+
+	@-webkit-keyframes walk {
+		0% {
+			right: 150px;
+			-webkit-transform: scaleX(1)
+		}
+
+		49.99% {
+			right: -99.98px;
+			-webkit-transform: scaleX(1)
+		}
+
+		50% {
+			right: -200px;
+			-webkit-transform: scaleX(-1)
+		}
+
+		100% {
+			right: 150px;
+			-webkit-transform: scaleX(-1)
+		}
 	}
 }
