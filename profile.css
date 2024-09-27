@@ -387,6 +387,45 @@ footer {
     font-size: 14px;
 }
 
+.page-fccview #profile-page>div:first-child>div>div:nth-child(2) ul,
+.page-fccview #profile-page>div:last-child>div>div:nth-child(1) ul {
+	display: flex;
+	width: 100vw; 
+	animation: scroll 130s linear infinite; 
+	animation-play-state: running;
+}
+
+
+.page-fccview #profile-page>div:first-child>div>div:nth-child(2) ul:hover,
+.page-fccview #profile-page>div:last-child>div>div:nth-child(1) ul:hover {
+	animation-play-state: paused; /* Stop animation when hovered */
+}
+
+.page-fccview #profile-page>div:first-child>div>div:nth-child(2) ul a,
+.page-fccview #profile-page>div:last-child>div>div:nth-child(1) ul a {
+	flex: 0 0 auto;
+	margin-right: 1rem; 
+	width: 30%; 
+	opacity: 0.6;
+}
+
+.page-fccview #profile-page>div:first-child>div>div:nth-child(2) ul a:hover,
+.page-fccview #profile-page>div:last-child>div>div:nth-child(1) ul a:hover {
+	opacity: 1;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(calc(-8 * 30% - 16 * 1rem));
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
 @media (max-width:992px) {
 	.page-fccview:before {
 		height: 100px;
@@ -414,6 +453,23 @@ footer {
 
 	.page-fccview #profile-page>div:first-child>div>div:last-child>div:last-child {
 		max-width: 80vw
+	}
+
+	.page-fccview #profile-page>div:first-child>div>div:nth-child(2) ul a,
+	.page-fccview #profile-page>div:last-child>div>div:nth-child(1) ul a {
+		width: 40%;
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		50% {
+			transform: translateX(calc(-8 * 40% - 16 * 1rem));
+		}
+		100% {
+			transform: translateX(0);
+		}
 	}
 }
 
