@@ -466,6 +466,10 @@ footer {
 		width: 40%;
 	}
 
+	.page-fccview #profile-page>div>div {
+		padding: 0!important;
+	}
+
 	@keyframes scroll {
 		0% {
 			transform: translateX(0);
