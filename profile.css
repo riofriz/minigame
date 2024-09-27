@@ -100,10 +100,10 @@
 
 @media (max-width:992px) {
 	.page-fccview:before {
-		height: 100px;
-		width: 60px;
-		bottom: 70px;
-		right: 10px
+        height: 150px;
+        width: 80px;
+        bottom: 60px;
+        right: 30px;
 	}
 }
 
@@ -230,11 +230,13 @@
 	position: fixed;
 	display: block;
 	left: -60px;
-	top: 30%;
 	transform: rotate(90deg);
 	font-size: 13px;
 	z-index: 9998;
-	background: rgba(0, 0, 0, .8) !important
+	background: #d1277c!important;
+    border-radius: 0.5em 0.5em 0 0;
+    cursor: pointer;
+    top: 40%;
 }
 
 .page-fccview #profile-page>div:first-child>div>div:last-child:hover>div:last-child {
@@ -432,6 +434,10 @@ footer {
 		width: 60px;
 		bottom: 70px;
 		right: 10px
+	}
+
+	.page-fccview #content {
+		padding-bottom: 5em;
 	}
 
 	.page-fccview>main {
