@@ -553,7 +553,34 @@ footer {
 	}
 
 	.page-fccview:before {
-		-webkit-animation: 5s linear infinite walk
+		animation: 5s linear infinite walk;
+		-webkit-animation: 5s linear infinite walk;
+	}
+
+	@keyframes walk {
+		0% {
+			right: 150px;
+			transform: scaleX(1);
+			-webkit-transform: scaleX(1);
+		}
+
+		49.99% {
+			right: -99.98px;
+			transform: scaleX(1);
+			-webkit-transform: scaleX(1)
+		}
+
+		50% {
+			right: -200px;
+			transform: scaleX(-1);
+			-webkit-transform: scaleX(-1)
+		}
+
+		100% {
+			right: 150px;
+			transform: scaleX(-1);
+			-webkit-transform: scaleX(-1)
+		}
 	}
 
 	@-webkit-keyframes walk {
