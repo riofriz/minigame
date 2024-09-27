@@ -263,7 +263,8 @@ footer {
 	border: 0;
 	position: absolute;
 	left: 50%;
-	transform: translate(-50%, 0)
+	transform: translate(-50%, 0);
+	z-index: 9998;
 }
 
 .page-fccview main>header a {
@@ -458,7 +459,12 @@ footer {
 	}
 
 	.page-fccview #profile-page>div:first-child>div>div:last-child>div:last-child {
-		max-width: 80vw
+		max-width: 95vw;
+        max-height: 92vh;
+        top: 0 !important;
+        transform: translate(0, 0) !important;
+        z-index: 9999 !important;
+        background: black !important;
 	}
 
 	.page-fccview #profile-page>div:first-child>div>div:nth-child(2) ul a,
