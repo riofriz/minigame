@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600&display=swap');
+
+.page-fccview main>header svg {
+	display: none
+}
+
+.page-fccview [data-name=intro]>span,
+.page-fccview [data-name=stats]>span {
+	min-width: 50px;
+	min-height: 20px;
+	display: block;
+	font-size: 1px;
+	visibility: hidden
+}
+
+.page-fccview #profile-page>div,
+.page-fccview #profile-page>div:first-child div,
+.page-fccview #profile-page>div:last-child>div>div:last-child {
+	background: 0 0 !important
+}
+
+.page-fccview #profile-page .not-prose {
+	display: none
+}
+
+#profile-page button.not-prose,
+#profile-page a.not-prose {
+	display: flex !important
+}
+
+.page-fccview #profile-page form .not-prose,
+.page-fccview #profile-page form+div .not-prose,
+.page-fccview #profile-page ul .not-prose {
+	display: flex
+}
+
+.page-fccview [data-name=intro] {
+	position: relative
+}
+
+.page-fccview [data-name=intro]>span:before {
+	content: '';
+	background: url('https://cdn.pixabay.com/photo/2013/07/12/15/20/pacman-149704_960_720.png') center/100%;
+	width: 70px;
+	height: 20px;
+	visibility: visible;
+	font-size: 14px;
+	display: block
+}
+
+.page-fccview [data-name=stats]>span {
+	text-align: center
+}
+
+.page-fccview [data-name=stats]>span:before {
+	content: '';
+	background: url('https://static-00.iconduck.com/assets.00/increase-stats-icon-2021x2048-87in2u2l.png') 0 0/100%;
+	width: 25px;
+	height: 20px;
+	visibility: visible;
+	font-size: 14px;
+	display: block
+}
+
+.page-fccview span[data-name=info]>span {
+	visibility: hidden;
+	font-size: 1px
+}
+
+.page-fccview span[data-name=info]>span:before {
+	visibility: visible;
+	content: 'About me';
+	font-size: 14px
+}
+
+.page-fccview #profile-page>div:last-child>div>div:last-child a {
+	border-radius: 0
+}
+
+.page-fccview section header {
+	background-image: url('https://i.redd.it/uwwte8wps4h91.gif') !important;
+	background-size: 100% auto !important;
+	background-position: 50% 80% !important
+}
+
+.page-fccview img[alt="fccview's Page Doll"] {
+	visibility: hidden
+}
+
+.page-fccview:before {
+	content: '';
+	position: fixed;
+	bottom: 0;
+	right: 30px;
+	background: url('https://i.imgur.com/0gKLla9.gif') 0 0/100%;
+	z-index: 9999;
+	width: 97px;
+	height: 206px
+}
+
+@media (max-width:992px) {
+	.page-fccview:before {
+		height: 100px;
+		width: 60px;
+		bottom: 70px;
+		right: 10px
+	}
+}
+
+@media (min-width:992px) {
+	.page-fccview #profile-page {
+		width: 100%;
+		max-width: 100% !important;
+		padding: 0;
+		margin-top: 0
+	}
+
+	.page-fccview section {
+		position: relative
+	}
+
+	.page-fccview section header main>div.hidden {
+		gap: 45px;
+		padding-left: 2em
+	}
+
+	.page-fccview section header main>div.hidden>a {
+		border-radius: 0 !important;
+		position: relative;
+		overflow: visible;
+		z-index: 0
+	}
+
+	.page-fccview section header main>div.hidden>a:before {
+		content: '';
+		position: absolute;
+		width: 24px;
+		height: 45px;
+		top: 3px;
+		background: #051824;
+		transform: rotate(30deg);
+		left: -13px;
+		z-index: -1
+	}
+
+	.page-fccview section header main>div.hidden>a:after {
+		content: '';
+		position: absolute;
+		width: 24px;
+		height: 45px;
+		top: 3px;
+		background: #051824;
+		transform: rotate(-30deg);
+		right: -13px;
+		z-index: -1
+	}
+
+	.page-fccview section header main>div.hidden>a:hover:after,
+	.page-fccview section header main>div.hidden>a:hover:before {
+		background: #102635
+	}
+}
+
+.page-fccview #content>section {
+	background: url('https://wallpapercave.com/wp/wp2757874.gif') 100% / auto fixed !important;
+	font-family: Poppins, sans-serif !important;
+	font-weight: 600
+}
+
+.page-fccview #content img[alt="Free Will by @fccview"] {
+	max-width: 100%;
+	margin: 0 auto;
+	opacity: .6
+}
+
+.page-fccview #content img[alt="Free Will by @fccview"]:hover,
+.page-fccview main>header a:hover:after {
+	opacity: 1
+}
+
+.page-fccview main .qazwp {
+	background: 0 0 !important
+}
+
+.page-fccview #profile-page>div>div {
+	background: rgba(15, 19, 22, .59);
+	padding: 2em
+}
+
+.page-fccview #profile-page>div:first-child>div {
+	padding: 0
+}
+
+.page-fccview #profile-page>div:first-child>div:last-child>div>div:last-child>div div {
+	border-radius: 0;
+	border: 0;
+	background: rgba(0, 0, 0, .7) !important
+}
+
+.page-fccview #profile-page>div:first-child>div:last-child>div>div:last-child>div div .not-prose {
+	display: flex !important
+}
+
+.page-fccview #profile-page span[tabindex="0"] {
+	border: 0;
+	border-top: 1px solid #17191d;
+	border-bottom: 1px solid #191720
+}
+
+.page-fccview #profile-page span[tabindex="0"]:not(:hover):not([data-active=true]) {
+	background: #191720
+}
+
+.page-fccview #profile-page>div:first-child>div>div:last-child>div:last-child {
+	position: fixed;
+	left: -100%;
+	top: 50%;
+	z-index: 9999;
+	transform: translate(0, -50%);
+	transition: left .2s;
+	background: rgba(0, 0, 0, .5) !important;
+	padding: 2em;
+	max-height: 100vh;
+	min-height: 80vh;
+	overflow-y: auto;
+	max-width: 50vw
+}
+
+.page-fccview #profile-page>div:first-child>div>div:last-child>div:first-child {
+	position: fixed;
+	display: block;
+	left: -60px;
+	top: 30%;
+	transform: rotate(90deg);
+	font-size: 13px;
+	z-index: 9998;
+	background: rgba(0, 0, 0, .8) !important
+}
+
+.page-fccview #profile-page>div:first-child>div>div:last-child:hover>div:last-child {
+	left: 0;
+	transition: left .2s
+}
+
+.page-fccview #profile-page>div:first-child>div>div:last-child:hover>div:first-child {
+	opacity: 0
+}
+
+.page-fccview main>header .items-center,
+.page-fccview main>header aside,
+.page-fccview main>header form,
+footer {
+	display: none !important
+}
+
+.page-fccview main>header {
+	background: rgba(0, 0, 0, .7);
+	border-radius: 0 0 100% 100%;
+	width: 110px;
+	height: 100px;
+	border: 0;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0)
+}
+
+.page-fccview main>header a {
+	display: block;
+	min-width: 100%;
+	min-height: 100%
+}
+
+.page-fccview main>header a:after {
+	content: '';
+	background: url('https://i.imgur.com/SVwSwSb.gif') 100% 100%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 0 0 100% 100%;
+	opacity: .8
+}
+
+.page-fccview section>header {
+	min-height: 40vh
+}
+
+@media (max-width:992px) {
+	.page-fccview>main {
+		padding-top: 0
+	}
+
+	.page-fccview section>header {
+		min-height: 20vh
+	}
+
+	.page-fccview main>header .hidden {
+		display: block
+	}
+
+	.page-fccview main>header {
+		width: 80px;
+		height: 80px
+	}
+
+	.page-fccview #profile-page>div:first-child>div>div:last-child>div:last-child {
+		max-width: 80vw
+	}
+}
