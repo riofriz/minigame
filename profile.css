@@ -286,7 +286,108 @@ footer {
 	min-height: 40vh
 }
 
+.page-fccview [data-name=intro]>span,
+.page-fccview [data-name=stats]>span {
+	min-width: 50px;
+	min-height: 20px;
+	display: block;
+	font-size: 1px;
+	visibility: hidden
+}
+
+.page-fccview #profile-page>div,
+.page-fccview #profile-page>div:first-child div,
+.page-fccview #profile-page>div:last-child>div>div:last-child {
+	background: 0 0 !important
+}
+
+.page-fccview #profile-page .not-prose {
+	display: none
+}
+
+#profile-page button.not-prose,
+#profile-page a.not-prose {
+	display: flex !important
+}
+
+.page-fccview #profile-page form .not-prose,
+.page-fccview #profile-page form+div .not-prose,
+.page-fccview #profile-page ul .not-prose {
+	display: flex
+}
+
+.page-fccview [data-name=intro] {
+	position: relative
+}
+
+.page-fccview [data-name=intro]>span:before {
+	content: '';
+	background: url('https://cdn.pixabay.com/photo/2013/07/12/15/20/pacman-149704_960_720.png') center/100%;
+	width: 70px;
+	height: 20px;
+	visibility: visible;
+	font-size: 14px;
+	display: block
+}
+
+.page-fccview [data-name=stats]>span {
+	text-align: center
+}
+
+.page-fccview [data-name=stats]>span:before {
+	content: '';
+	background: url('https://static-00.iconduck.com/assets.00/increase-stats-icon-2021x2048-87in2u2l.png') 0 0/100%;
+	width: 25px;
+	height: 20px;
+	visibility: visible;
+	font-size: 14px;
+	display: block
+}
+
+.page-fccview span[data-name=info]>span {
+	visibility: hidden;
+	font-size: 1px
+}
+
+.page-fccview span[data-name=info]>span:before {
+	visibility: visible;
+	content: 'About me';
+	font-size: 14px
+}
+
+.page-fccview #profile-page>div:last-child>div>div:last-child a {
+	border-radius: 0
+}
+
+.page-fccview section header {
+	background-image: url('https://i.redd.it/uwwte8wps4h91.gif') !important;
+	background-size: 100% auto !important;
+	background-position: 50% 80% !important
+}
+
+.page-fccview img[alt="fccview's Page Doll"] {
+	visibility: hidden
+}
+
+.page-fccview:before {
+	content: '';
+	position: fixed;
+	bottom: 0;
+	right: 30px;
+	background: url('https://i.imgur.com/0gKLla9.gif') 0 0/100%;
+	z-index: 9999;
+	width: 97px;
+	height: 206px
+}
+
 @media (max-width:992px) {
+	.page-fccview:before {
+		height: 100px;
+		width: 60px;
+		bottom: 70px;
+		right: 10px
+	}
+
 	.page-fccview>main {
 		padding-top: 0
 	}
@@ -306,5 +407,59 @@ footer {
 
 	.page-fccview #profile-page>div:first-child>div>div:last-child>div:last-child {
 		max-width: 80vw
+	}
+}
+
+@media (min-width:992px) {
+	.page-fccview #profile-page {
+		width: 100%;
+		max-width: 100% !important;
+		padding: 0;
+		margin-top: 0
+	}
+
+	.page-fccview section {
+		position: relative
+	}
+
+	.page-fccview section header main>div.hidden {
+		gap: 45px;
+		padding-left: 2em
+	}
+
+	.page-fccview section header main>div.hidden>a {
+		border-radius: 0 !important;
+		position: relative;
+		overflow: visible;
+		z-index: 0
+	}
+
+	.page-fccview section header main>div.hidden>a:before {
+		content: '';
+		position: absolute;
+		width: 24px;
+		height: 45px;
+		top: 3px;
+		background: #051824;
+		transform: rotate(30deg);
+		left: -13px;
+		z-index: -1
+	}
+
+	.page-fccview section header main>div.hidden>a:after {
+		content: '';
+		position: absolute;
+		width: 24px;
+		height: 45px;
+		top: 3px;
+		background: #051824;
+		transform: rotate(-30deg);
+		right: -13px;
+		z-index: -1
+	}
+
+	.page-fccview section header main>div.hidden>a:hover:after,
+	.page-fccview section header main>div.hidden>a:hover:before {
+		background: #102635
 	}
 }
