@@ -234,7 +234,7 @@
       off[DOWN] = [0, f];
 
       ctx.beginPath();
-      ctx.fillStyle = "#1e1508";
+      ctx.fillStyle = "#111419";
       ctx.arc(
         left + 6 + off[direction][0],
         top + 6 + off[direction][1],
@@ -673,7 +673,7 @@
           if (map[i][j] === Pacman.PILL) {
             ctx.beginPath();
 
-            ctx.fillStyle = "#1e1508";
+            ctx.fillStyle = "#111419";
             ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
 
             ctx.fillStyle = "#dfe8ec";
@@ -697,7 +697,7 @@
         j,
         size = blockSize;
 
-      ctx.fillStyle = "#1e1508";
+      ctx.fillStyle = "#111419";
       ctx.fillRect(0, 0, width * size, height * size);
 
       drawWall(ctx);
@@ -723,7 +723,7 @@
         layout === Pacman.BLOCK ||
         layout === Pacman.BISCUIT
       ) {
-        ctx.fillStyle = "#1e1508";
+        ctx.fillStyle = "#111419";
         ctx.fillRect(x * blockSize, y * blockSize, blockSize, blockSize);
 
         if (layout === Pacman.BISCUIT) {
@@ -955,7 +955,7 @@
       var topLeft = map.height * map.blockSize,
         textBase = topLeft + 17;
 
-      ctx.fillStyle = "#1e1508";
+      ctx.fillStyle = "#111419";
       ctx.fillRect(0, topLeft, map.width * map.blockSize, 30);
 
       ctx.fillStyle = "#f2fbff";
