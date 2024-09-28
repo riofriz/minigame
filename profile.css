@@ -473,10 +473,6 @@ footer {
         right: 20px;
 	}
 
-	.page-fccview #content {
-		padding-bottom: 10em;
-	}
-
 	.page-fccview>main {
 		padding-top: 0
 	}
@@ -506,6 +502,10 @@ footer {
 	.page-fccview #profile-page>div:first-child>div>div:nth-child(2) ul a,
 	.page-fccview #profile-page>div:last-child>div>div:nth-child(1) ul a {
 		width: 40%;
+	}
+
+	.page-fccview #profile-page>div:last-child>div>div:nth-child(1) {
+		padding-bottom: 10em;
 	}
 
 	.page-fccview #profile-page>div>div {
