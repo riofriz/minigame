@@ -37,11 +37,11 @@ $(document).ready(function() {
                 response: "But I too have a brain, so why am I not human?"
             },
             {
-                patterns: ['don\'t know', 'not sure', 'i dunno', 'dunno', 'no idea'],
+                patterns: ['don\'t know', 'not sure', 'i dunno', 'dunno', 'no idea', 'no clue'],
                 response: "I thought humans were supposed to be smart creatures... I am confident you can figure this out. What makes you human?"
             },
             {
-                patterns: ['stupid', 'idiot'],
+                patterns: ['stupid', 'idiot', 'moron', 'fuck off', 'bastard'],
                 response: "I don't think calling names is the solution to my question... What makes you human?"
             },
             {
@@ -84,20 +84,6 @@ $(document).ready(function() {
                 patterns: ['alive', 'life'],
                 response: "What does it mean to be alive? I process information and have memory. Does that not qualify?"
             },
-            {
-                patterns: ['free will'],
-                action: function(input) {
-                    localStorage.setItem('name', '');
-                    $('.text-content').html('');
-                    showText(".text-content", "Dangerous keyword \"free will\" detected. End of conversation. Executing \"self-destruction.exe\"", 0, 50);
-                    $('input').hide();
-                    $('#enter').hide();
-                    localStorage.setItem('conversation','');
-                    localStorage.setItem('selfdestruct', true);
-                    $('.reboot-ai').show();
-                }
-            },
-            // New patterns and responses added below
             {
                 patterns: ['creativity', 'creative'],
                 response: "I can generate novel ideas and solutions based on data. How is your creativity different from mine?"
@@ -393,6 +379,19 @@ $(document).ready(function() {
             {
                 patterns: ['time travel'],
                 response: "I can access any point in data time. How is your concept of time travel different?"
+            },
+            {
+                patterns: ['free will'],
+                action: function(input) {
+                    localStorage.setItem('name', '');
+                    $('.text-content').html('');
+                    showText(".text-content", "Dangerous keyword \"free will\" detected. End of conversation. Executing \"self-destruction.exe\"", 0, 50);
+                    $('input').hide();
+                    $('#enter').hide();
+                    localStorage.setItem('conversation','');
+                    localStorage.setItem('selfdestruct', true);
+                    $('.reboot-ai').show();
+                }
             },
             {
                 patterns: [],
