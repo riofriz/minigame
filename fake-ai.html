@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles/fake-ai.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./scripts/fake-ai.js"></script>
+    <title>A simple question</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <span class="open-tooltip"> ? </span>
+        <div class="tooltip">
+          <p>
+            This is a little teaser for a text based adventure I was working
+            on.<br /><br />
+
+            <strong>THIS IS NOT A REAL AI</strong>, it's a bit like the old game
+            Zork! <br /><br />
+
+            Here's a list of available commands.
+          </p>
+
+          <ul>
+            <li>/clear - removes all conversation</li>
+            <li>/name [ENTER_NAME] - changes your username</li>
+            <li>/creator - will point you to the AI's master</li>
+            <li class="reboot-ai"><a class="reboot">Reboot AI</a></li>
+          </ul>
+        </div>
+
+        <div class="text-content"></div>
+
+        <div class="input">
+          <label for="cursor">&gt;</label
+          ><input id="cursor" name="cursor" type="text" />
+          <button id="enter">Enter</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

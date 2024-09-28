@@ -1,0 +1,139 @@
+body {
+    overflow: hidden;
+    color: white;
+    font-family: 'TIFAX';
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+@font-face {
+    font-family: 'TIFAX';
+    src: url('../assets/TIFAX-Alpha.woff2') format('woff2'),
+    url('../assets/TIFAX-Alpha.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #1010108b;
+    position: relative;
+    padding: 2em;
+}
+.wrapper .content {
+    max-width: 80vw;
+    max-height: 600px;
+    height: 600px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    padding: 1em;
+    font-size: 12px;
+    overflow-y: scroll;
+}
+.wrapper .content .input {
+    display: flex;
+}
+.wrapper .content .input label {
+    font-size: 8px;
+    padding-right: 0.5em;
+}
+.wrapper input {
+    background: transparent;
+    color: white;
+    border: 0;
+    width: 100%;
+    font-size: 12px;
+    font-family: 'TIFAX';
+    letter-spacing: -3px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+span.open-tooltip {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    color: black;
+    background: white;
+    text-align: center;
+    padding: 0.1em 0.4em;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1;
+    font-family: 'proxima-nova';
+    letter-spacing: 0;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+span.open-tooltip:hover {
+    opacity: 1;
+}
+
+.reboot {
+    cursor: pointer;
+}
+
+.reboot-ai {
+    display: none;
+}
+
+span.open-tooltip.active {
+    background: black;
+    color: white;
+}
+
+.tooltip {
+    background: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    color: black;
+    padding: 1em;
+    display: none;
+    font-family: 'proxima-nova';
+    letter-spacing: 0;
+}
+
+.tooltip.active {
+    display: block;
+}
+
+#enter {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #enter {
+        display: block;
+        color: white;
+        border: 1px solid white;
+        background: transparent;
+        padding: 0.5em;
+        margin-top: 1em;
+    }
+
+    .wrapper .content .input {
+        flex-wrap: wrap;
+    }
+
+    .wrapper .content input {
+        width: 90%;
+    }
+}
