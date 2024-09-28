@@ -26,12 +26,13 @@ body {
     position: relative;
     padding: 2em;
 }
+
 .wrapper .content {
-    max-width: 80vw;
+    max-width: 100%;
     max-height: 600px;
     height: 600px;
     width: 100%;
-    background: black;
+    background: rgba(0,0,0,0.6);
     position: absolute;
     left: 50%;
     top: 0;
