@@ -43,10 +43,12 @@ body {
 }
 .wrapper .content .input {
     display: flex;
+    padding-top: 1em;
 }
 .wrapper .content .input label {
     font-size: 8px;
     padding-right: 0.5em;
+    font-size: 13px;
 }
 .wrapper input {
     background: transparent;
@@ -97,6 +99,12 @@ span.open-tooltip.active {
     color: white;
 }
 
+.text-content span {
+    display: inline-block;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
 .tooltip {
     background: white;
     position: fixed;
@@ -132,6 +140,7 @@ span.open-tooltip.active {
 
     .wrapper .content .input {
         flex-wrap: wrap;
+        padding-top: 0.3em;
     }
 
     .wrapper .content input {
