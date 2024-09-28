@@ -258,7 +258,7 @@ footer {
 .page-fccview main>header {
 	background: rgba(0, 0, 0, .7);
 	border-radius: 0 0 100% 100%;
-	width: 110px;
+	width: 100px;
 	height: 100px;
 	border: 0;
 	position: absolute;
@@ -275,14 +275,26 @@ footer {
 
 .page-fccview main>header a:after {
 	content: '';
-	background: url('https://i.imgur.com/SVwSwSb.gif') 100% 100%;
+	background-image: url('https://i.imgur.com/SVwSwSb.gif');
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
 	border-radius: 0 0 100% 100%;
-	opacity: .8
+	opacity: .8;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-size: 100% 100%;
+	background-position: 0 -5px;
+	background-repeat: no-repeat;
+	transition: opacity 0.3s;
+}
+
+.page-fccview main>header:hover a:after {
+	opacity: 1;
+	transition: opacity 0.3s;
 }
 
 .page-fccview section>header {
@@ -420,6 +432,7 @@ footer {
 	margin-right: 1rem; 
 	width: 30%; 
 	opacity: 0.6;
+	border-radius: 0;
 }
 
 .page-fccview #profile-page>div:first-child>div>div:nth-child(2) ul a:hover,
@@ -454,14 +467,14 @@ footer {
 	}
 	
 	.page-fccview:before {
-		height: 100px;
-		width: 60px;
-		bottom: 70px;
-		right: 10px
+        height: 150px;
+        width: 80px;
+        bottom: 60px;
+        right: 20px;
 	}
 
 	.page-fccview #content {
-		padding-bottom: 5em;
+		padding-bottom: 10em;
 	}
 
 	.page-fccview>main {
@@ -477,7 +490,7 @@ footer {
 	}
 
 	.page-fccview main>header {
-		width: 80px;
+		width: 90px;
 		height: 80px
 	}
 
